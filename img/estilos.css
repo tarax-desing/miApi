@@ -1,67 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
+  position: relative;
   width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 header img {
-   
-    width:60%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: #ccc;
+  width: 60%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: #ccc;
 }
 
 nav ul {
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 .btn {
-    background-color: #888;
-    color: #fff;
-    border: none;
-    border-radius: 5rem;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 5rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #555;
+  background-color: #555;
 }
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
-    header img {
-        width: 100%; /* Ancho del 100% para que se adapte a la pantalla móvil */
-        height: auto; /* Alto automático para que se ajuste a la relación de aspecto */
-        object-fit: cover; /* Mantener la relación de aspecto original */
-    }
+  header img {
+    width: 100%; /* Ancho del 100% para que se adapte a la pantalla móvil */
+    height: auto; /* Alto automático para que se ajuste a la relación de aspecto */
+    object-fit: cover; /* Mantener la relación de aspecto original */
+  }
 }
+h1 {
+  font-family: merienda;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+/* .primero {
+  display: block;
+  unicode-bidi: isolate;
+  justify-content: center;
+  justify-items: center;
+} */
+.card {
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0px -1px 4px 3px;
+  max-width: 30%;
+  flex-direction: row;
+}
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card {
+    width: 30%; /* Ajusta el ancho de cada card */
+    margin: 10px; /* Ajusta el margen entre cards */
+    background-color: #f7f7f7; /* Ajusta el color de fondo de cada card */
+    padding: 20px; /* Ajusta el padding de cada card */
+    border: 1px solid #ddd; /* Ajusta el borde de cada card */
+    border-radius: 10px; /* Ajusta el radio de cada card */
+  }
+  
+  .card img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 150px; /* Ajusta el alto de la imagen */
+    object-fit: cover; /* Ajusta la relación de aspecto de la imagen */
+  }
+  
+  .card-text {
+    padding: 20px; /* Ajusta el padding del texto */
+  }
+  
+  .card-text h2 {
+    font-size: 18px; /* Ajusta el tamaño de fuente del título */
+    margin-bottom: 10px; /* Ajusta el margen inferior del título */
+  }
+  
+  .card-text p {
+    font-size: 14px; /* Ajusta el tamaño de fuente del texto */
+    color: #666; /* Ajusta el color del texto */
+  }

@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
     <title>Mi Página Web</title>
-    <link rel="stylesheet" href="img/estilos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="img/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/202.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+  </head>
+  <body>
     <header>
-        <img src="img/portada.png" alt="Imagen principal">
-        <nav>
-            <ul>
-                <li><a href="#" class="btn">Inicio</a></li>
-                <li><a href="#" class="btn">Música</a></li>
-                <li><a href="#" class="btn">Comida</a></li>
-                <li><a href="#" class="btn">Tecnología</a></li>
-            </ul>
-        </nav>
+      <img src="img/portada.png" alt="Imagen principal" />
+      <nav>
+        <ul>
+          <li><a href="#" class="btn">Inicio</a></li>
+          <li><a href="#" class="btn">Música</a></li>
+          <li><a href="#" class="btn">Comida</a></li>
+          <li><a href="#" class="btn">Tecnología</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <!-- Contenido principal -->
+      <!-- Contenido principal -->
+      <h1>Tendencias-top</h1>
+      <section class="primero">
+        <div class="card-grid">
+          <div class="card">
+            <img class="top" src="img/music.png" alt="últimas tendencias" />
+            <div class="card-text">
+              <h2>Music</h2>
+              <p>Los últimos éxitos musicales en España.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="top" src="img/comida.png" alt="últimas tendencias" />
+            <div class="card-text">
+              <h2>Alimentación</h2>
+              <p>Dieta mediterránea, la más saludable y completa.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="top" src="img/px.jpg" alt="últimas tendencias" />
+            <div class="card-text">
+              <h2>Tecnología</h2>
+              <p>Descubre los nuevos avances en inteligencia artificial.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="javaScript.js"></script>
-</body>
+  </body>
 </html>
