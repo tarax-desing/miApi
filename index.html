@@ -16,18 +16,22 @@
     />
     <link rel="shortcut icon" href="img/202.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
+    
   </head>
   <body>
     <header>
       <img src="img/portada.png" alt="Imagen principal" />
-      <nav>
+      <nav id="nav">
         <ul>
-          <li><a href="#" class="btn">Inicio</a></li>
-          <li><a href="#" class="btn">Música</a></li>
-          <li><a href="#" class="btn">Comida</a></li>
-          <li><a href="#" class="btn">Tecnología</a></li>
+          <li><a href="#inicio" onclick="seleccionar()">Inicio</a></li>
+          <li><a href="#musica" onclick="seleccionar()">Música</a></li>
+          <li><a href="#alimentacion" onclick="seleccionar()">Alimentación</a></li>
+          <li><a href="#tecnologia" onclick="seleccionar()">Tecnología</a></li>
         </ul>
       </nav>
+      <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
     </header>
     <main>
       <!-- Contenido principal -->
@@ -37,7 +41,7 @@
           <div class="card">
             <img class="top" src="img/music.png" alt="últimas tendencias" />
             <div class="card-text">
-              <h2>Music</h2>
+              <h2>Música</h2>
               <p>Los últimos éxitos musicales en España.</p>
             </div>
           </div>
