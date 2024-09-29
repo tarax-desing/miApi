@@ -3,17 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-    /* me permite deslizar cuando hago clic en los links del menu */
-    scroll-behavior: smooth;
-    
-    
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+html {
+  /* me permite deslizar cuando hago clic en los links del menu */
+  scroll-behavior: smooth;
 }
 
 header {
@@ -32,40 +24,82 @@ header img {
   margin-bottom: 20px;
   box-shadow: #ccc;
 }
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
 
+.nav-list li a {
+  font-family: poppins;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-list li a:hover{
+    color: darkorange;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #ffffff;
+  }
+
+  .cerrar-menu {
+    color: #0d0d0d;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ecececec;
+  }
+
+}
 nav ul {
-  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #ccc;
-}
-.contenedor-header header nav ul li a:hover{
-    color: #1CB698;
-}
-/* .nav-responsive{
-    background-color: #1CB698;
-    color:#fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-} */
 
 .btn {
   background-color: #888;
@@ -80,6 +114,7 @@ nav a:hover {
 .btn:hover {
   background-color: #555;
 }
+*/
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
   header img {
@@ -89,18 +124,12 @@ nav a:hover {
   }
 }
 h1 {
-  font-family: merienda;
+  font-family: poppins;
   justify-content: center;
   text-align: center;
   margin: 2rem auto;
 }
 
-/* .primero {
-  display: block;
-  unicode-bidi: isolate;
-  justify-content: center;
-  justify-items: center;
-} */
 .card {
   text-align: left;
   border-radius: 10px;
@@ -109,36 +138,41 @@ h1 {
   flex-direction: row;
 }
 .card-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card {
-    width: 30%; /* Ajusta el ancho de cada card */
-    margin: 10px; /* Ajusta el margen entre cards */
-    background-color: #f7f7f7; /* Ajusta el color de fondo de cada card */
-    padding: 20px; /* Ajusta el padding de cada card */
-    border: 1px solid #ddd; /* Ajusta el borde de cada card */
-    border-radius: 10px; /* Ajusta el radio de cada card */
-  }
-  
-  .card img {
-    width: 100%; /* Ajusta el ancho de la imagen */
-    height: 150px; /* Ajusta el alto de la imagen */
-    object-fit: cover; /* Ajusta la relación de aspecto de la imagen */
-  }
-  
-  .card-text {
-    padding: 20px; /* Ajusta el padding del texto */
-  }
-  
-  .card-text h2 {
-    font-size: 18px; /* Ajusta el tamaño de fuente del título */
-    margin-bottom: 10px; /* Ajusta el margen inferior del título */
-  }
-  
-  .card-text p {
-    font-size: 14px; /* Ajusta el tamaño de fuente del texto */
-    color: #666; /* Ajusta el color del texto */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 30%; /* Ajusta el ancho de cada card */
+  margin: 10px; /* Ajusta el margen entre cards */
+  background-color: #f7f7f7; /* Ajusta el color de fondo de cada card */
+  padding: 20px; /* Ajusta el padding de cada card */
+  border: 1px solid #ddd; /* Ajusta el borde de cada card */
+  border-radius: 10px; /* Ajusta el radio de cada card */
+}
+
+.card img {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: 150px; /* Ajusta el alto de la imagen */
+  object-fit: cover; /* Ajusta la relación de aspecto de la imagen */
+}
+
+.card-text {
+  padding: 20px; /* Ajusta el padding del texto */
+}
+
+.card-text h2 {
+  font-size: 18px; /* Ajusta el tamaño de fuente del título */
+  margin-bottom: 10px; /* Ajusta el margen inferior del título */
+}
+
+.card-text p {
+  font-size: 14px; /* Ajusta el tamaño de fuente del texto */
+  color: #666; /* Ajusta el color del texto */
+}
+footer {
+  justify-content: center;
+  text-align: center;
+  margin: 2rem;
+}
